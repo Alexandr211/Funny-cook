@@ -1,30 +1,31 @@
-<h2Hello! </h2>
+<p align="center">Hello! </p>
 
-    <p
-        <br>
-        This is an example of food service which helps to find  the Dishes from Menu according Ingredients selected by the user.<br><br>
-        The logic of the app is:<br>
-        1. Admin section consists of <br>
-        1.1. CRUD for Ingredients.<br>
-        1.2. CRUD for Dishes which consist of ingredients.<br><br>
+    
         
-        Admin can hide one of the ingredients, in this case the dish containing this ingredient will also be hidden.<br><br>
+        This is an example of food service which helps to find  the Dishes from Menu according Ingredients selected by the user.
         
-        2. User section.<br>
+        The logic of the app is:
+        1. Admin section consists of 
+        1.1. CRUD for Ingredients.
+        1.2. CRUD for Dishes which consist of ingredients.
         
-        User can select up to 5 Ingredients to find the appropriate Dishes.<br>
-        2.1. If dishes with complete matching of ingredients are found, only they will be shown.<br>
-        2.2. If dishes with a partial match of ingredients are found, they will be displayed in order of decreasing the match of ingredients up to 2x.<br>
-        2.3. If dishes with a match of less than 2 ingredients are found or they are not found, “Nothing found” will be displayed.<br>
-        2.4. If less than 2 ingredients are selected a message: “Choose more ingredients” will be displayed.<br><br>
+        Admin can hide one of the ingredients, in this case the dish containing this ingredient will also be hidden.
         
-        Please mail me for any reason: alexandr211@yandex.ru<br>
-        <br>
-        Sincerely,<br>
+        2. User section.
+        
+        User can select up to 5 Ingredients to find the appropriate Dishes.
+        2.1. If dishes with complete matching of ingredients are found, only they will be shown.
+        2.2. If dishes with a partial match of ingredients are found, they will be displayed in order of decreasing the match of ingredients up to 2x.
+        2.3. If dishes with a match of less than 2 ingredients are found or they are not found, “Nothing found” will be displayed.
+        2.4. If less than 2 ingredients are selected a message: “Choose more ingredients” will be displayed.
+        
+        Please mail me for any reason: alexandr211@yandex.ru
+        
+        Sincerely,
         Alexander Bashtanov       
         
           
-    </p>
+    
 
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
