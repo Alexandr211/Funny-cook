@@ -1,6 +1,6 @@
-<h2>Hello! </h2>
+<h2Hello! </h2>
 
-    <p>
+    <p
         <br>
         This is an example of food service which helps to find  the Dishes from Menu according Ingredients selected by the user.<br><br>
         The logic of the app is:<br>
