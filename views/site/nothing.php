@@ -11,4 +11,4 @@ $this->title = "Поиск";
      <?= Html::a('New Search', ['/site/search'], ['class'=>'btn btn-primary']) ?>   
     </div>
    
-   <h2>Sorry, but nothing found!</h2>
+   <h2>Извините, но ничего не найдено!</h2>

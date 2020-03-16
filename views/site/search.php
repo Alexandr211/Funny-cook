@@ -2,8 +2,9 @@
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
-//use app\models\Dishes;
-/* @var $driver app\models\Driver */
+/* @var $this yii\web\View */
+
+$this->title = 'Поиск в меню';
 ?>
 
      <div>
@@ -13,26 +14,26 @@ use yii\helpers\ArrayHelper;
     // use map ArrayHelper
     $ingredient = ArrayHelper::map($ingredients,'id','ingredient');
          ?>
-      <h2>Please select at least 2 Ingredients</h2>   
+      <h2>Пожалуйста выберите не менее 2-х ингредиентов</h2>
       <div class="row">
       <div class="col-xs-5">
-      <?= $form->field($items, 'ingredient1')->dropDownList($ingredient)->label('Ingredient1') ?>
+      <?= $form->field($items, 'ingredient1')->dropDownList($ingredient)->label('Ингредиент1') ?>
       </div>
       <div class="col-xs-5">
-      <?= $form->field($items, 'ingredient2')->dropDownList($ingredient)->label('Ingredient2') ?>
+      <?= $form->field($items, 'ingredient2')->dropDownList($ingredient)->label('Ингредиент2') ?>
       </div>
       <div class="col-xs-5">
-      <?= $form->field($items, 'ingredient3')->dropDownList($ingredient)->label('Ingredient3') ?>
+      <?= $form->field($items, 'ingredient3')->dropDownList($ingredient)->label('Ингредиент3') ?>
       </div>
       <div class="col-xs-5">
-      <?= $form->field($items, 'ingredient4')->dropDownList($ingredient)->label('Ingredient4') ?>
+      <?= $form->field($items, 'ingredient4')->dropDownList($ingredient)->label('Ингредиент4') ?>
       </div>
       <div class="col-xs-5">
-      <?= $form->field($items, 'ingredient5')->dropDownList($ingredient)->label('Ingredient5') ?>
+      <?= $form->field($items, 'ingredient5')->dropDownList($ingredient)->label('Ингредиент5') ?>
       </div>
       <div class="form-group">
         <div class = "col-xs-11" align="left">
-            <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+            <?= Html::submitButton('Найти блюдо', ['class' => 'btn btn-primary']) ?>
         </div>
       </div>
       <?php ActiveForm::end(); ?>

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\DishesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Dishes';
+$this->title = 'Меню';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dishes-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Dishes', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать блюдо', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

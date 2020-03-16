@@ -15,8 +15,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'ingredient')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'visibility')->DropDownList([
-    '1' => 'visible',
-    '0' => 'hidden'
+    '1' => 'в наличии',
+    '0' => 'отсутствует'
 ]) ?>
 
     <div class="form-group">

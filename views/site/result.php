@@ -8,23 +8,23 @@ $this->title = "Поиск";
 ?>
 
    <div>
-     <?= Html::a('New Search', ['/site/search'], ['class'=>'btn btn-primary']) ?>   
+     <?= Html::a('Новый поиск', ['/site/search'], ['class'=>'btn btn-primary']) ?>
     </div>
    
-   <h2>The Dishes selected:</h2>
+   <h2>Результат поиска:</h2>
    
     <ul>
      <?php foreach ($items as $item): ?>
      
     <li>
-        <?= $item->dish ?>
+        <?= $item ?>
     </li>
        
        <?php endforeach; ?>   
         
     </ul>  
     
-    <div><?php//= $items1; ?></div>
+
     
     
     

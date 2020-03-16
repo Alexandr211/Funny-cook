@@ -55,17 +55,17 @@ class Dishes extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'dish' => 'Dish',
-            'ingredient1' => 'Ingredient1',
-            'ingredient1_name' => 'Ingredient1',
-            'ingredient2' => 'Ingredient2',
-            'ingredient2_name' => 'Ingredient2',
-            'ingredient3' => 'Ingredient3',
-            'ingredient3_name' => 'Ingredient3',
-            'ingredient4' => 'Ingredient4',
-            'ingredient4_name' => 'Ingredient4',
-            'ingredient5' => 'Ingredient5',
-            'ingredient5_name' => 'Ingredient5'
+            'dish' => 'Блюдо',
+            'ingredient1' => 'Ингредиент1',
+            'ingredient1_name' => 'Ингредиент1',
+            'ingredient2' => 'Ингредиент2',
+            'ingredient2_name' => 'Ингредиент2',
+            'ingredient3' => 'Ингредиент3',
+            'ingredient3_name' => 'Ингредиент3',
+            'ingredient4' => 'Ингредиент4',
+            'ingredient4_name' => 'Ингредиент4',
+            'ingredient5' => 'Ингредиент5',
+            'ingredient5_name' => 'Ингредиент5'
         ];
     }
 

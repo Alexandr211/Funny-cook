@@ -2,15 +2,15 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Ваше лучшее Меню';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>The simple Menu!</h1>
+        <h1>Попробуйте выбрать Ваше Меню!</h1>
 
-        <p class="lead">It's an example of regular expressions logic usage</p>
-        <p class="lead">Try immediately!</p>
+        <p class="lead">Это пример реализации поискового механизма <br/>  результат сортируется по убыванию критерия "наибольшее совпадение"</p>
+        <p class="lead">Попробуйте, он действительно найдет!</p>
         
         
     </div>
@@ -19,23 +19,23 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Ingredients</h2>
+                <h2>Ингредиенты</h2>
 
-                <p>1. For fast usage just input Ingredients you need.</p>
-
-                
-            </div>
-            <div class="col-lg-4">
-                <h2>Dishes</h2>
-
-                <p>2. Compose the unique Dishes.</p>
+                <p>1. Введите ингредиенты которые нужны. <br/> Если установлен признак "нет в наличии", <br/>то блюда с таким ингредиентом не будут найдены</p>
 
                 
             </div>
             <div class="col-lg-4">
-                <h2>Great Menu</h2>
+                <h2>Меню</h2>
 
-                <p>3. and select Your Great Menu!</p>
+                <p>2. Сформируйте Ваше неповторимое меню!</p>
+
+                
+            </div>
+            <div class="col-lg-4">
+                <h2>Поиск блюд</h2>
+
+                <p>3. Выберите подходящие по ингредиентам блюда!</p>
 
                 
             </div>

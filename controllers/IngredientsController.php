@@ -86,8 +86,13 @@ class IngredientsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->id == 1){
+                Yii::$app->session->setFlash('error', 'Нельзя редактировать или удалять этот параметр!');
+                return $this->redirect(['index']);
+            }elseIf($model->save()){
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
@@ -104,9 +109,13 @@ class IngredientsController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        if($id == 1){
+            Yii::$app->session->setFlash('error', 'Нельзя редактировать или удалять этот параметр!');
+            return $this->redirect(['index']);
+        }else{
+            $this->findModel($id)->delete();
+            return $this->redirect(['index']);
+        }
     }
 
     /**

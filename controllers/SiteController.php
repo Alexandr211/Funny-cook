@@ -136,53 +136,24 @@ class SiteController extends Controller
      */
     
     public function actionSearch()
-{       
-       $dishes = new Dishes();
-        
-       if ($dishes->load(Yii::$app->request->post())) {
-    
-       // get input array
+{
+    $dishes = new Dishes();
+
+    if ($dishes->load(Yii::$app->request->post())) {
         $string = Yii::$app->request->post();
-        
-       // try regexp for input data. Not to find if less than 2 ingredients selected
-        $input = preg_grep("/^1{0,1}$/",$string["Dishes"]);
+        // \Yii::info(print_r($string,1), 'cook');
+        // try regexp for input data. Not to find if less than 2 ingredients selected
+        $input = preg_grep("/^1$/", $string["Dishes"]);
         $count_input = count($input);
         if ($count_input >= 4) {
             return $this->render('select_more');
-            //var_dump('Please select more ingredients!');
-            exit();
         }
-         
-        // to render the dishes with the all appropriate ingredients selected
-        
-        $sql_all = Search::sql_all($dishes);
-             
-        if($sql_all != null) {
-            return $this->render('result', ['items' => $sql_all]);
+        $result_arr = (new Search())->searchAll($dishes);
+        if (!empty($result_arr)) {
+            return $this->render('result', ['items' => $result_arr]);
         } else {
-        
-        // to render the dishes with 4 of 5 coincidenced ingredients
-        $sql_4 = Search::sql_4($dishes);
-   
-        // to render the dishes with 3 of 5 coincidenced ingredients        
-        $sql_3 = Search::sql_3($dishes);
-            
-        // to render the dishes with 2 of 5 coincidenced ingredients        
-        $sql_2 = Search::sql_2($dishes);
-        
-        // Get union result 
-        $sql_result = $sql_4->union($sql_3)->union($sql_2)->orderBy('dish')->all();    
-     
-            if($sql_result != null) {
-              return $this->render('result', ['items' => $sql_result]);  
-            } 
-            else {
-              return $this->render('nothing');
-                //var_dump('Nothing is found!');
-            }
-              
+            return $this->render('nothing');
         }
-     
    }
     else {
         return $this->render('search', ['items' => $dishes]);
